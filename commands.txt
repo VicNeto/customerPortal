@@ -1,0 +1,18 @@
+Commands
+
+
+python3 -m venv bproject
+source bproject/bin/activate
+pip install django==2.1.1 -U
+
+django-admin startproject Business
+
+python3 manage.py startapp CustomerData
+python3 manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py createsuperuser
+python3 manage.py runserver
+
+pip install django-auth-ldap
+
+pip install djangorestframework

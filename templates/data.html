@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+<title> Customers Data</title>
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+        <div class="row">
+
+            {% for costumer in costumers %}
+                <ul class="list-group">
+                    <li class="list-group-item">Id: {{ costumer.pk }}</li>
+                    <li class="list-group-item">First Name: {{ costumer.first_Name }}</li>
+                    <li class="list-group-item">Last Name: {{ costumer.last_Name }}</li>
+                    <li class="list-group-item">Street address: {{ costumer.streetAdd }}</li>
+                    <li class="list-group-item">City: {{ costumer.city }}</li>
+                    <li class="list-group-item">State: {{ costumer.state }}</li>
+                    <li class="list-group-item">Zip: {{ costumer.zipNumber }}</li>
+                </ul>
+                <hr>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
